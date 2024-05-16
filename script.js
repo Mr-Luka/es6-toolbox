@@ -11,4 +11,13 @@ console.log(noParameters())
 
 const manyParameters = (param1, param2, param3) => 
 `I have ${param1}, ${param2}, and ${param3} living in my home!`;
-console.log(manyParameters("Monsteras", "Photos", "Alocasia plants"))
+console.log(manyParameters("Monsteras", "Photos", "Alocasia plants"));
+
+const manyParameters2 = (param1, param2, param3) =>{
+    let statement = `I have ${param1}`;
+    statement += `, ${param2}`;
+    statement += `, and ${param3}`;
+    statement += ` living in my home!`;
+    return statement;
+};
+console.log(manyParameters2("Monsteras", "Photos", "Alocasia plants"));
