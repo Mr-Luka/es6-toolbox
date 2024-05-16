@@ -42,9 +42,8 @@ const digimon = (dig1, dig2, dig3, dig4) => {
         }
     }
 
-    return digi.forEach(digim => {
-        `I love ${digim.name} and ${digim.friend}!`;
-    });
+
+    return digi
 
 }
-console.log(digimon)
+console.log(digimon("one", "two", "three", "four"))
