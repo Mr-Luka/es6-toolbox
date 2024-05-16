@@ -1,28 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function GreetGuests () {
+  const weCanUseVariablesAsPropValues = "Grace";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Greeting name="Caroline" />
+      <Greeting name="Marie" />
+      <Greeting name={weCanUseVariablesAsPropValues} />
     </div>
   );
-}
+};
 
-export default App;
+
+export default GreetGuests;
 
 const Greeting = props => (
   <div>
@@ -33,16 +24,7 @@ const Greeting = props => (
 );
 
 
-const GreetGuests = () => {
-  const weCanUseVariablesAsPropValues = "Grace";
-  return (
-    <div>
-      <Greeting name="Caroline" />
-      <Greeting name="Marie" />
-      <Greeting name={weCanUseVariablesAsPropValues} />
-    </div>
-  );
-};
+
 
 const rootElement = document.querySelector("root");
 ReactDOM.render(<GreetGuests />, rootElement);
