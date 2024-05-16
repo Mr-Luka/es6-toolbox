@@ -24,15 +24,25 @@ function App() {
 
 export default App;
 
-const GroceryList = () => (
-    <ul>
-        <li>Broccoli</li>
-        <li>Carrots</li>
-        <li>Apples</li>
-        <li>Oranges</li>
-        <li>Kale</li>
-    </ul>
+const Greeting = props => (
+  <div>
+    <h2>Welcome!</h2>
+    <p>Hi, {props.name}.</p>
+    <p>We are so happy that you have come to crush React</p>
+  </div>
 );
 
-const rootElement = dociment.querySelector("#root");
-ReactDOM.render(<GroceryList />, rootElement);
+
+const GreetGuests = () => {
+  const weCanUseVariablesAsPropValues = "Grace";
+  return (
+    <div>
+      <Greeting name="Caroline" />
+      <Greeting name="Marie" />
+      <Greeting name={weCanUseVariablesAsPropValues} />
+    </div>
+  );
+};
+
+const rootElement = document.querySelector("root");
+ReactDOM.render(<GreetGuests />, rootElement);
