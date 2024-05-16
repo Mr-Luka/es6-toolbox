@@ -8,3 +8,7 @@ console.log(es6Function("Luka"))
 
 const noParameters = () => "I accept no arguments!";
 console.log(noParameters())
+
+const manyParameters = (param1, param2, param3) => 
+`I have ${param1}, ${param2}, and ${param3} living in my home!`;
+console.log(manyParameters("Monsteras", "Photos", "Alocasia plants"))
