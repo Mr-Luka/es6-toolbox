@@ -22,8 +22,7 @@ const manyParameters2 = (param1, param2, param3) =>{
 };
 console.log(manyParameters2("Monsteras", "Photos", "Alocasia plants"));
 
-const digimon = (dig1, dig2, dig3, dig4) => {
-    const digi = {
+const digi = {
         digi1: {
             name: "Agumon",
             friend: "Taichi"
@@ -42,8 +41,9 @@ const digimon = (dig1, dig2, dig3, dig4) => {
         }
     }
 
-
-    return digi
-
+const digimon = () => {
+    Object.values(digi).forEach(dig => {
+        console.log(`I love ${dig.name} and ${dig.friend}!`);
+    })
 }
-console.log(digimon("one", "two", "three", "four"))
+digimon()
