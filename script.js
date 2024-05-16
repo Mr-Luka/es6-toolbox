@@ -21,3 +21,30 @@ const manyParameters2 = (param1, param2, param3) =>{
     return statement;
 };
 console.log(manyParameters2("Monsteras", "Photos", "Alocasia plants"));
+
+const digimon = (dig1, dig2, dig3, dig4) => {
+    const digi = {
+        digi1: {
+            name: "Agumon",
+            friend: "Taichi"
+        },
+        digi2: {
+            name: "Gabumon",
+            friend: "Koshiro"
+        },
+        digi3: {
+            name: "Piyomon",
+            friend: "Sora"
+        },
+        digi4: {
+            name: "Palmon",
+            friend: "Mimi"
+        }
+    }
+
+    return digi.forEach(digim => {
+        `I love ${digim.name} and ${digim.friend}!`;
+    });
+
+}
+console.log(digimon)
